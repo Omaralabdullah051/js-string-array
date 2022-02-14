@@ -78,3 +78,81 @@ console.log(substring2);
 const substring3 = anthem.substring(15, -5);
 console.log(substring3);/*because (15,0)*/
 //when we omit the first parameter; method count indexstart 0 and when we omit the second parameter ;method count indexend (string.length-1) the rest of the string.
+
+//concat 
+const first = 'Amarder';
+const second = 'City';
+const fullString = first.concat(second).concat('hello');
+console.log(fullString);
+
+//join
+const array = ['alim', 'badhon', 'lion', 'kachamorich', 'sodhon'];
+// const allJoined = array.join('');
+// const allJoined = array.join(' ');
+// const allJoined = array.join(',');
+const allJoined = array.join('@@@');
+console.log(allJoined);
+
+////////////////////Array methods/////////////////////
+
+//concat arrays
+
+const firstArray = [1, 2, 3, 4];
+const secondArray = [5, 6, 7, 8];
+const thirdArray = [9, 10];
+const concatArrays = firstArray.concat(secondArray).concat(thirdArray);
+console.log(concatArrays);
+
+//indexOf()
+//includes()
+//Array.isArray() 
+//splice()
+
+//splice()
+const myArray = [2, 8, 9, 10, 29, 85, 92, 33];
+//add and remove elements by splice method
+// const splice = myArray.splice(3, 4, 60, 70, 87, 44, 99, 66);
+// console.log(splice);
+// console.log(myArray);
+
+//remove elements by splice method
+// const splice2 = myArray.splice(3, 4);
+// console.log(splice2);
+// console.log(myArray);
+
+//add elements by splice method
+const splice3 = myArray.splice(3, 0, 60, 80, 99);
+console.log(splice3);
+console.log(myArray);
+
+//sort for arranging alphabetical order
+const alphabet = ['hello', 'abul', 'kalam', 'badhon', 'cagol', 'modon', 'dada'];
+const alphabeticalSort = alphabet.sort();
+console.log(alphabeticalSort);
+
+//sort for arranging number order
+// ascending order 
+const allNumbers = [0, 60, 20, 59, 99, 88, 55, 77];
+const ascendingNumberSort = allNumbers.sort(function (a, b) {
+    return a - b;
+})
+console.log(ascendingNumberSort);
+//descending order
+const descendingNumberSort = allNumbers.sort(function (a, b) {
+    return b - a;
+})
+console.log(descendingNumberSort);
+
+//reverse 
+const reverse = alphabet.reverse();
+console.log(reverse);
+
+//unlimited parameter to function using arguments
+function getSum() {
+    let result = 0;
+    for (const sum of arguments) {
+        result = result + sum;
+    }
+    return result;
+}
+console.log((getSum(9, 10, 77, 89, 45, 98)));
